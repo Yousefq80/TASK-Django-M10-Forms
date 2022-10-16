@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <h1>Create Item</h1>
+    <div>
+      <form action="{% url 'create_item' %}" method="POST">
+        {% csrf_token %} {{ form }}
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </body>
+</html>
