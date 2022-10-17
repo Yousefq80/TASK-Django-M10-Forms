@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Update</title>
+  </head>
+  <body>
+    <form
+      action="{% url 'update_store_item' item_id=store_item.id %}"
+      method="POST"
+    >
+      {% csrf_token %} {{ form }}
+      <input type="submit" value="Update" />
+    </form>
+  </body>
+</html>
