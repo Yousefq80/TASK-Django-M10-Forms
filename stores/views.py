@@ -44,3 +44,7 @@ def delete_store_item (request, item_id):
         raise Http404('Item Does Not Exist')
     store_item.delete()
     return redirect("store_item_list" )
+
+def show_items(request):  
+    store = StoreItem.objects.all()  
+    return render(request,"show.html",{'store':store})  
